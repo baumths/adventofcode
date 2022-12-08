@@ -1,4 +1,7 @@
+import 'dart:math' as math;
 import 'dart:io';
+
+part '01/solution.dart';
 
 void main(Iterable<String> args) {
   if (args.isEmpty) {
@@ -38,7 +41,9 @@ abstract class Solution {
   Object solvePartOne(Iterable<String> lines);
   Object solvePartTwo(Iterable<String> lines);
 
-  static final Map<String, Solution> days = {};
+  static final Map<String, Solution> days = {
+    '01': DayOne(),
+  };
 }
 
 Iterable<String> readFile(String path) {
