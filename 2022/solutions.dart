@@ -1,8 +1,10 @@
+import 'dart:collection';
 import 'dart:math' as math;
 import 'dart:io';
 
 part '01/solution.dart';
 part '02/solution.dart';
+part '03/solution.dart';
 
 void main(Iterable<String> args) {
   if (args.isEmpty) {
@@ -45,6 +47,7 @@ abstract class Solution {
   static final Map<String, Solution> days = {
     '01': DayOne(),
     '02': DayTwo(),
+    '03': DayThree(),
   };
 }
 
