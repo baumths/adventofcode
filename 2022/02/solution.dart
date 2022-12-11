@@ -1,4 +1,4 @@
-part of '../solutions.dart';
+import '../solution.dart' show Solution;
 
 /// Shared by both parts
 const loss = 0;

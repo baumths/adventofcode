@@ -1,23 +1,20 @@
-import 'dart:collection';
-import 'dart:math' as math;
 import 'dart:io';
 
-part '01/solution.dart';
-part '02/solution.dart';
-part '03/solution.dart';
+import 'days.dart' show days;
+import 'solution.dart' show Solution;
 
 void main(Iterable<String> args) {
   if (args.isEmpty) {
-    Solution.days.forEach(solve);
+    days.forEach(solve);
   } else {
     final String day = args.first;
 
-    if (!Solution.days.keys.contains(day)) {
+    if (!days.keys.contains(day)) {
       print('Day not found: $day');
       exit(1);
     }
 
-    solve(day, Solution.days[day]!);
+    solve(day, days[day]!);
   }
 }
 
@@ -38,17 +35,6 @@ void solve(String day, Solution solution) {
   buffer.writeln('   └─ Part 2: ${solution.solvePartTwo(lines)}');
 
   print(buffer.toString());
-}
-
-abstract class Solution {
-  Object solvePartOne(Iterable<String> lines);
-  Object solvePartTwo(Iterable<String> lines);
-
-  static final Map<String, Solution> days = {
-    '01': DayOne(),
-    '02': DayTwo(),
-    '03': DayThree(),
-  };
 }
 
 Iterable<String> readFile(String path) {

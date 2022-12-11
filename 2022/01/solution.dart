@@ -1,4 +1,5 @@
-part of '../solutions.dart';
+import 'dart:math' as math;
+import '../solution.dart' show Solution;
 
 class DayOne implements Solution {
   @override
