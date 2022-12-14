@@ -4,6 +4,7 @@ import '03/solution.dart' show DayThree;
 import '04/solution.dart' show DayFour;
 import '05/solution.dart' show DayFive;
 import '06/solution.dart' show DaySix;
+import '07/solution.dart' show DaySeven;
 
 import 'solution.dart' show Solution;
 
@@ -14,4 +15,5 @@ final Map<String, Solution> days = {
   '04': DayFour(),
   '05': DayFive(),
   '06': DaySix(),
+  '07': DaySeven(),
 };
